@@ -1,0 +1,141 @@
+
+#dados
+import random
+
+def rolar_d20():
+    return random.randint(1, 20)
+
+#jogo da lampada por texto
+a1 = ['ligar luz da sala','ir dormir']
+a2 = ['ir compram uma lampada nova', 'ignorar e ir dormir']
+a3 = ['sim', 'não']
+a4 = ['ignorar van e ir ao mercado', 'vereficar van']
+a5 = ['-boa noite,aonde fica as lampada?','-nao preciso de ajuda,obrigado mesmo assim']
+a6 = ['comprar a mais barata','comprar a mais cara']
+a7 = ['dinheiro', 'cartao' ]
+a8 = ['debito', 'credito']
+saldo_di = int(50)
+saldo_de = int(200)
+saldo_cre = int(1000)
+print('=====================================================================')
+print('ditribua 10 pontos')
+print('=====================================================================')
+forca = (int(input('valor da força')))
+agil = (int(input('valor da agilidade')))
+pers = (int(input('valor da percepçao')))
+intel = (int(input('valor da inteligencia')))
+cons = (int(input('valor da constituiçao')))
+
+print('================================================================================')
+input('em cenas de dialogo,para progredir,é necessario precionar ENTER(pressione ENTER)')
+print('================================================================================')
+
+if forca + agil + pers + intel + cons!=10:
+   print('nao de uma de esperto(reinicie jogo)') 
+else:
+    print('CAPITULO 1:Quem apagou a luz?')
+    input('*pressione ENTER')
+    input('*Depois de um dia cansativo no trabalho,você chega em casa.Esta bem escuro')
+    print('=================')
+    print('[1]',a1[0])
+    print('[2]',a1[1])
+    print('=================')
+    r1 = (int(input(' ')))
+    if r1==1:
+        print('*a lampada da sala nao esta funcionando')
+        print('=================')
+        print('[1]',a2[0])
+        print('[2]',a2[1])
+        print('=================')
+        r2 = (int(input(' ')))
+        if r2==1:
+            input('*O mercado ainda está aberto')
+            input('*Voce pega as chaves do carro')
+            input('*voce vai em direçao ao carro e entra')
+            input('*voce da partida no carro')
+            print('Voce sabe o caminho?')
+            print('=================')
+            print('[1]',a3[0])
+            print('[2]',a3[1])
+            print('=================')
+            r3 = (int(input(' ')))
+            if r3==2:
+                print('*Voce pega seu celular e abre o gps')
+                print('*voce coloca a localizaçao do mercado mais proximo')
+            input('*voce dirige ate o mercado')
+            input('voce estaciona o carro perto da entrada')
+            input('*o estacionamento esta completamente vazio')
+            input('*exeto por uma van preta em canto escuro,parece que tem alguem te observando de dentro dela')
+            print('=================')
+            print('[1]',a4[0])
+            print('[2]',a4[1])
+            print('=================')
+            r4 = (int(input(' ')))
+            if r4==2:
+                input('*voce anda ate a van')
+                input('parece ser alugada')
+                input('nao tem ninguem dentro')
+                input('de qualquer jeito')
+            input('voce vai em direçao à entrada')
+            input('uma moça simpatica vai em sua direçao')
+            print('funcionaria:Boa noite,como posso ajuda-lo?')
+            print('=================')
+            print('[1]',a5[0])
+            print('[2]',a5[1])
+            print('=================')
+            r5 = (int(input(' ')))
+            if r5==1:
+                input('funcionaria:fica no corredor 5,junto aos adaptadores de tomada ')
+                input('-obrigado')
+                input('funcionaria:de nada,se precisar de ajuda é so chamar')
+            input('*voce vai em direçao ao corredor 5')
+            input('ha varias opçoes de lampadas')
+            print('=================')
+            print('[1]',a6[0])
+            print('[2]',a6[1])
+            print('=================')
+            r6 = (int(input(' ')))
+            if r6==1:
+                input('voce pega a lampada ')
+                valor = "R$10"
+            if r6==2:
+                valor = "R$20"
+                input('voce paga a lampada')
+            input('voce vai em direçao ao caixa')
+            input('nao tem fila')
+            input('na verdade,nao tem ninguem no lugar,exeto os funcionarios')
+            input('caixa:você so vai levar isso?')
+            input('-sim')
+            print('funcionario:deu',valor,',qual vai ser o metodo de pagamento?')
+            print('=================')
+            print('[1]',a7[0],'*disponivel ','R$',saldo_di)
+            print('[2]',a7[1])
+            print('=================')
+            r7 = (int(input(' ')))
+            if r7==2:
+                input('caixa:debito ou credito?')
+                print('=================')
+                print('[1]',a8[0],'saldo disponivel ',"R$",saldo_de)
+                print('[2]',a8[1],'saldo disponivel ',"R$",saldo_cre)
+                print('=================')
+                r8 = (int(input(' ')))
+                input('*voce aproxima o cartao da maquina')
+                input('...pagamento aprovado')
+            input('caixa:voce quer a sua notinha?') 
+            input('-nao,obrigado ')
+            input('caixa:tenha uma boa noite e ate a proxima')
+            input('-boa noite')
+            input('*voce vai em direçao ao carro')
+            input("teste de percepçao(d20)pressione enter")
+            resultado1 = rolar_d20()
+            print("resultado:", resultado1 + pers)
+            if resultado1>=10:
+                input('voce percebe que a van nao esta mais lá')
+                input('quando ela foi embora?....')
+            input('de qualquer jeito')
+            input('voce vai em direçao ao carro')
+        else:
+            print('você dorme em paz')
+    else:
+        print('você dorme em paz')
+
